@@ -118,9 +118,18 @@ namespace ABM
                 conn.Open();
                 string query = @"SELECT id, usuario, contrasena, mail, telefono, direccion
                                     FROM USUARIOS";
-                SqlCommand command = new SqlCommand(query, conn);
+                
+                SqlCommand command = new SqlCommand();
 
+                //search
+                if (!string.IsNullOrEmpty(buscarText))
+                {
+                    query += "WHERE usuario LIKE @Search OR contrasena LIKE @Search OR mail LIKE @Search OR telefono LIKE @Search OR direccion LIKE @Search";
+                    command.Parameters.Add(new SqlParameter("@Search", $"%{buscarText}%"));
+                }
 
+                command.CommandText = query;
+                command.Connection = conn;
 
                 SqlDataReader reader = command.ExecuteReader();
 

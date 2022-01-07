@@ -77,7 +77,8 @@ namespace ABM
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-
+            PopulateUsuarios(txtBuscar.Text);
+            txtBuscar.Text = string.Empty;
         }
     }
 }
