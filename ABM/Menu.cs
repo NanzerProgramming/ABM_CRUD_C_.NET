@@ -8,15 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace ABM
 {
     public partial class Menu : Form
     {
         private CapaDeNegocios _CapaDeNegocios;
+        
         public Menu()
         {
             InitializeComponent();
             _CapaDeNegocios = new CapaDeNegocios();
+            
         }
 
         #region EVENTS
@@ -53,11 +56,7 @@ namespace ABM
                 PopulateUsuarios();
             }
         }
-        private void btnBuscar_Click(object sender, EventArgs e)
-        {
-            PopulateUsuarios(txtBuscar.Text);
-            txtBuscar.Text = string.Empty;
-        }
+        
         #endregion
 
         #region PRIVATE METHODS
@@ -73,12 +72,12 @@ namespace ABM
         #endregion
 
         #region PUBLIC METHODS
-        public void PopulateUsuarios(string buscarText = null)
+        public void PopulateUsuarios()
         {
-            List<Usuarios> usuarios = _CapaDeNegocios.GetUsuarios(buscarText);
+            List<Usuarios> usuarios = _CapaDeNegocios.GetUsuarios();
             gridUsuarios.DataSource = usuarios;
         }
         #endregion
-
+       
     }
 }

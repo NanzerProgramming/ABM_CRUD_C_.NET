@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace ABM
 {
     public class CapaDeAccesoDatos
@@ -110,7 +111,7 @@ namespace ABM
             finally { conn.Close(); }
         }
 
-        public List<Usuarios> GetUsuarios(string buscarText = null)
+        public List<Usuarios> GetUsuarios()
         {
             List<Usuarios> usuarios = new List<Usuarios>();
             try
@@ -119,17 +120,7 @@ namespace ABM
                 string query = @"SELECT id, usuario, contrasena, mail, telefono, direccion
                                     FROM USUARIOS";
                 
-                SqlCommand command = new SqlCommand();
-
-                //search
-                if (!string.IsNullOrEmpty(buscarText))
-                {
-                    query += "WHERE usuario LIKE @Search OR contrasena LIKE @Search OR mail LIKE @Search OR telefono LIKE @Search OR direccion LIKE @Search";
-                    command.Parameters.Add(new SqlParameter("@Search", $"%{buscarText}%"));
-                }
-
-                command.CommandText = query;
-                command.Connection = conn;
+                SqlCommand command = new SqlCommand(query,conn);
 
                 SqlDataReader reader = command.ExecuteReader();
 
@@ -157,7 +148,6 @@ namespace ABM
             }
             return usuarios;
         }
-
 
     }
 

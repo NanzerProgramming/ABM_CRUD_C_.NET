@@ -22,9 +22,9 @@ namespace ABM
             
             return usuarios;        
         }
-        public List<Usuarios> GetUsuarios(string buscarText = null)
+        public List<Usuarios> GetUsuarios()
         {
-           return _CapaDeAccesoDatos.GetUsuarios(buscarText);
+           return _CapaDeAccesoDatos.GetUsuarios();
         }
 
         public void DeleteUsuarios(int Id)
