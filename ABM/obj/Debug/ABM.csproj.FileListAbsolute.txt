@@ -9,3 +9,14 @@ C:\Users\manue\source\repos\ABM\ABM\obj\Debug\ABM.csproj.GenerateResource.cache
 C:\Users\manue\source\repos\ABM\ABM\obj\Debug\ABM.csproj.CoreCompileInputs.cache
 C:\Users\manue\source\repos\ABM\ABM\obj\Debug\ABM.exe
 C:\Users\manue\source\repos\ABM\ABM\obj\Debug\ABM.pdb
+C:\Users\manue\source\repos\ABM\GitHub\ABM_CRUD_C_.NET\ABM\bin\Debug\ABM.exe.config
+C:\Users\manue\source\repos\ABM\GitHub\ABM_CRUD_C_.NET\ABM\bin\Debug\ABM.exe
+C:\Users\manue\source\repos\ABM\GitHub\ABM_CRUD_C_.NET\ABM\bin\Debug\ABM.pdb
+C:\Users\manue\source\repos\ABM\GitHub\ABM_CRUD_C_.NET\ABM\obj\Debug\ABM.csproj.AssemblyReference.cache
+C:\Users\manue\source\repos\ABM\GitHub\ABM_CRUD_C_.NET\ABM\obj\Debug\ABM.Agregar.resources
+C:\Users\manue\source\repos\ABM\GitHub\ABM_CRUD_C_.NET\ABM\obj\Debug\ABM.Menu.resources
+C:\Users\manue\source\repos\ABM\GitHub\ABM_CRUD_C_.NET\ABM\obj\Debug\ABM.Properties.Resources.resources
+C:\Users\manue\source\repos\ABM\GitHub\ABM_CRUD_C_.NET\ABM\obj\Debug\ABM.csproj.GenerateResource.cache
+C:\Users\manue\source\repos\ABM\GitHub\ABM_CRUD_C_.NET\ABM\obj\Debug\ABM.csproj.CoreCompileInputs.cache
+C:\Users\manue\source\repos\ABM\GitHub\ABM_CRUD_C_.NET\ABM\obj\Debug\ABM.exe
+C:\Users\manue\source\repos\ABM\GitHub\ABM_CRUD_C_.NET\ABM\obj\Debug\ABM.pdb

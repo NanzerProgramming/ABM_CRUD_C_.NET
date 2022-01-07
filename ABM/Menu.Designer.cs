@@ -36,6 +36,7 @@ namespace ABM
             this.label1 = new System.Windows.Forms.Label();
             this.gridUsuarios = new System.Windows.Forms.DataGridView();
             this.Editar = new System.Windows.Forms.DataGridViewLinkColumn();
+            this.Eliminar = new System.Windows.Forms.DataGridViewLinkColumn();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.usuarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.contrasenaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -67,6 +68,7 @@ namespace ABM
             this.btnBuscar.TabIndex = 8;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // txtBuscar
             // 
@@ -97,7 +99,8 @@ namespace ABM
             this.mailDataGridViewTextBoxColumn,
             this.telefonoDataGridViewTextBoxColumn,
             this.direccionDataGridViewTextBoxColumn,
-            this.Editar});
+            this.Editar,
+            this.Eliminar});
             this.gridUsuarios.DataSource = this.usuariosBindingSource;
             this.gridUsuarios.Location = new System.Drawing.Point(12, 100);
             this.gridUsuarios.Name = "gridUsuarios";
@@ -112,6 +115,14 @@ namespace ABM
             this.Editar.ReadOnly = true;
             this.Editar.Text = "Editar";
             this.Editar.UseColumnTextForLinkValue = true;
+            // 
+            // Eliminar
+            // 
+            this.Eliminar.HeaderText = "Eliminar";
+            this.Eliminar.Name = "Eliminar";
+            this.Eliminar.ReadOnly = true;
+            this.Eliminar.Text = "Eliminar";
+            this.Eliminar.UseColumnTextForLinkValue = true;
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -188,6 +199,7 @@ namespace ABM
         private System.Windows.Forms.DataGridViewTextBoxColumn telefonoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn direccionDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewLinkColumn Editar;
+        private System.Windows.Forms.DataGridViewLinkColumn Eliminar;
     }
 }
 

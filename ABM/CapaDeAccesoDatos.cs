@@ -62,7 +62,8 @@ namespace ABM
                                         contrasena = @contrasena, 
                                         mail = @mail, 
                                         telefono = @telefono, 
-                                        direccion = @direccion";
+                                        direccion = @direccion
+                                    WHERE id = @id";
 
                 SqlParameter Id = new SqlParameter("@id", usuarios.Id);
                 SqlParameter usuario = new SqlParameter("@usuario", usuarios.usuario);
@@ -89,8 +90,27 @@ namespace ABM
             finally { conn.Close(); }
         }
 
+        public void DeleteUsuarios(int Id)
+        {
+            try
+            {
+                conn.Open();
+                string query = @"DELETE FROM USUARIOS WHERE id = @id";
 
-        public List<Usuarios> GetUsuarios()
+                SqlCommand Command = new SqlCommand(query, conn);
+                Command.Parameters.Add(new SqlParameter("@id", Id));
+
+                Command.ExecuteNonQuery();
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            finally { conn.Close(); }
+        }
+
+        public List<Usuarios> GetUsuarios(string buscarText = null)
         {
             List<Usuarios> usuarios = new List<Usuarios>();
             try
@@ -99,6 +119,8 @@ namespace ABM
                 string query = @"SELECT id, usuario, contrasena, mail, telefono, direccion
                                     FROM USUARIOS";
                 SqlCommand command = new SqlCommand(query, conn);
+
+
 
                 SqlDataReader reader = command.ExecuteReader();
 

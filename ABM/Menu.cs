@@ -40,9 +40,9 @@ namespace ABM
         {
             PopulateUsuarios();
         }
-        public void PopulateUsuarios()
+        public void PopulateUsuarios(string buscarText = null)
         {
-            List<Usuarios> usuarios = _CapaDeNegocios.GetUsuarios();
+            List<Usuarios> usuarios = _CapaDeNegocios.GetUsuarios(buscarText);
             gridUsuarios.DataSource = usuarios;
         }
 
@@ -64,6 +64,20 @@ namespace ABM
                 });
                 agregar.ShowDialog(this);
             }
+            else if (cell.Value.ToString() == "Eliminar")
+            {
+                DeleteUsuarios(int.Parse(gridUsuarios.Rows[e.RowIndex].Cells[0].Value.ToString()));
+                PopulateUsuarios();
+            }
+        }
+        private void DeleteUsuarios(int Id)
+        {
+            _CapaDeNegocios.DeleteUsuarios(Id);
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
