@@ -9,8 +9,8 @@ namespace ABM
 {
     public class CapaDeAccesoDatos
     {
-        //private SqlConnection conn = new SqlConnection("Integrated Security=SSPI;Persist Security Info=False;Initial Catalog=CRUD;Data Source=DESKTOP-KCF03C0\\SQLEXPRESS");
-        private SqlConnection conn = new SqlConnection("workstation id=ProyectosNanzerProg.mssql.somee.com;packet size=4096;user id=Nanzer_SQLLogin_1;pwd=7d26t13ar4;data source=ProyectosNanzerProg.mssql.somee.com;persist security info=False;initial catalog=ProyectosNanzerProg");
+        //private SqlConnection conn = new SqlConnection("Integrated Security=SSPI;Persist Security Info=False;Initial Catalog=CRUD;Data Source=DESKTOP-KCF03C0\\SQLEXPRESS"); //CONEXION PRIVADA
+        private SqlConnection conn = new SqlConnection("workstation id=ProyectosNanzerProg.mssql.somee.com;packet size=4096;user id=Nanzer_SQLLogin_1;pwd=7d26t13ar4;data source=ProyectosNanzerProg.mssql.somee.com;persist security info=False;initial catalog=ProyectosNanzerProg"); //CONEXION PÚBLICA
 
         public void InsertUsuarios(Usuarios usuarios)
         {

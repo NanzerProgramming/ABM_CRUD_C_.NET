@@ -20,6 +20,7 @@ namespace ABM
             _capaDeNegocios = new CapaDeNegocios();
         }
 
+        #region EVENTS
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -31,7 +32,9 @@ namespace ABM
             this.Close();
             ((Menu)this.Owner).PopulateUsuarios();
         }
+        #endregion
 
+        #region PRIVATE METHODS
         private void SaveUsuarios()
         {
             Usuarios usuarios = new Usuarios();
@@ -46,6 +49,17 @@ namespace ABM
             _capaDeNegocios.SaveUsuarios(usuarios);
         }
 
+        private void ClearForm()
+        {
+            txtAgregarUsu.Text = string.Empty;
+            txtAgregarContra.Text = string.Empty;
+            txtAgregarMail.Text = string.Empty;
+            txtAgregarTel.Text = string.Empty;
+            txtAgregarDire.Text = string.Empty;
+        }
+        #endregion
+
+        #region PUBLIC METHODS
         public void LoadUsuarios(Usuarios usuarios)
         {
 
@@ -60,18 +74,9 @@ namespace ABM
                 txtAgregarTel.Text = usuarios.telefono;
                 txtAgregarDire.Text = usuarios.direccion;
             }
-          
+
         }
 
-        private void ClearForm()
-        {
-            txtAgregarUsu.Text = string.Empty;
-            txtAgregarContra.Text = string.Empty;
-            txtAgregarMail.Text = string.Empty;
-            txtAgregarTel.Text = string.Empty;
-            txtAgregarDire.Text = string.Empty;
-        }
-
-        
+        #endregion
     }
 }

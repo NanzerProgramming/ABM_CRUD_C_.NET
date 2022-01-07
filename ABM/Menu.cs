@@ -25,32 +25,15 @@ namespace ABM
             OpenAgregarDialog();
         }
 
-        #endregion
-
-        #region PRIVATE METHODS
-        private void OpenAgregarDialog() 
-        {
-            Agregar Agregar = new Agregar();
-            Agregar.ShowDialog(this);
-        }
-
-        #endregion
-
         private void Menu_Load(object sender, EventArgs e)
         {
             PopulateUsuarios();
         }
-        public void PopulateUsuarios(string buscarText = null)
-        {
-            List<Usuarios> usuarios = _CapaDeNegocios.GetUsuarios(buscarText);
-            gridUsuarios.DataSource = usuarios;
-        }
-
         private void gridUsuarios_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             DataGridViewLinkCell cell = (DataGridViewLinkCell)gridUsuarios.Rows[e.RowIndex].Cells[e.ColumnIndex];
 
-            if(cell.Value.ToString() == "Editar")
+            if (cell.Value.ToString() == "Editar")
             {
                 Agregar agregar = new Agregar();
                 agregar.LoadUsuarios(new Usuarios
@@ -70,15 +53,32 @@ namespace ABM
                 PopulateUsuarios();
             }
         }
-        private void DeleteUsuarios(int Id)
-        {
-            _CapaDeNegocios.DeleteUsuarios(Id);
-        }
-
         private void btnBuscar_Click(object sender, EventArgs e)
         {
             PopulateUsuarios(txtBuscar.Text);
             txtBuscar.Text = string.Empty;
         }
+        #endregion
+
+        #region PRIVATE METHODS
+        private void OpenAgregarDialog() 
+        {
+            Agregar Agregar = new Agregar();
+            Agregar.ShowDialog(this);
+        }
+        private void DeleteUsuarios(int Id)
+        {
+            _CapaDeNegocios.DeleteUsuarios(Id);
+        }
+        #endregion
+
+        #region PUBLIC METHODS
+        public void PopulateUsuarios(string buscarText = null)
+        {
+            List<Usuarios> usuarios = _CapaDeNegocios.GetUsuarios(buscarText);
+            gridUsuarios.DataSource = usuarios;
+        }
+        #endregion
+
     }
 }
