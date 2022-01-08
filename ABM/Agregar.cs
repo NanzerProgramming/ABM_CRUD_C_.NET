@@ -74,6 +74,13 @@ namespace ABM
         {
             txtAgregarUsu.Focus();
         }
+        private void btnAdd_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == Convert.ToChar(Keys.Right))
+            {
+                btnCancelar.Focus();
+            }
+        }
         #endregion
 
         #region PRIVATE METHODS
@@ -122,12 +129,6 @@ namespace ABM
 
         #endregion
 
-        private void btnAdd_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (e.KeyChar == Convert.ToChar(Keys.Right))
-            {
-                btnCancelar.Focus();
-            }
-        }
+        
     }
 }
