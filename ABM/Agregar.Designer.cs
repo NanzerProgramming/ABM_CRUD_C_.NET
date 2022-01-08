@@ -48,8 +48,9 @@ namespace ABM
             this.txtAgregarDire.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAgregarDire.Location = new System.Drawing.Point(232, 237);
             this.txtAgregarDire.Name = "txtAgregarDire";
-            this.txtAgregarDire.Size = new System.Drawing.Size(116, 22);
+            this.txtAgregarDire.Size = new System.Drawing.Size(147, 22);
             this.txtAgregarDire.TabIndex = 23;
+            this.txtAgregarDire.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAgregarDire_KeyPress);
             // 
             // label5
             // 
@@ -66,8 +67,9 @@ namespace ABM
             this.txtAgregarTel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAgregarTel.Location = new System.Drawing.Point(232, 192);
             this.txtAgregarTel.Name = "txtAgregarTel";
-            this.txtAgregarTel.Size = new System.Drawing.Size(116, 22);
+            this.txtAgregarTel.Size = new System.Drawing.Size(147, 22);
             this.txtAgregarTel.TabIndex = 21;
+            this.txtAgregarTel.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAgregarTel_KeyPress);
             // 
             // label4
             // 
@@ -84,8 +86,9 @@ namespace ABM
             this.txtAgregarMail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAgregarMail.Location = new System.Drawing.Point(232, 153);
             this.txtAgregarMail.Name = "txtAgregarMail";
-            this.txtAgregarMail.Size = new System.Drawing.Size(116, 22);
+            this.txtAgregarMail.Size = new System.Drawing.Size(147, 22);
             this.txtAgregarMail.TabIndex = 19;
+            this.txtAgregarMail.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAgregarMail_KeyPress);
             // 
             // label3
             // 
@@ -102,8 +105,9 @@ namespace ABM
             this.txtAgregarContra.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAgregarContra.Location = new System.Drawing.Point(232, 113);
             this.txtAgregarContra.Name = "txtAgregarContra";
-            this.txtAgregarContra.Size = new System.Drawing.Size(116, 22);
+            this.txtAgregarContra.Size = new System.Drawing.Size(147, 22);
             this.txtAgregarContra.TabIndex = 17;
+            this.txtAgregarContra.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAgregarContra_KeyPress);
             // 
             // label2
             // 
@@ -120,8 +124,9 @@ namespace ABM
             this.txtAgregarUsu.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAgregarUsu.Location = new System.Drawing.Point(232, 72);
             this.txtAgregarUsu.Name = "txtAgregarUsu";
-            this.txtAgregarUsu.Size = new System.Drawing.Size(116, 22);
+            this.txtAgregarUsu.Size = new System.Drawing.Size(147, 22);
             this.txtAgregarUsu.TabIndex = 15;
+            this.txtAgregarUsu.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAgregarUsu_KeyPress);
             // 
             // label1
             // 
@@ -137,7 +142,7 @@ namespace ABM
             // 
             this.btnCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelar.Location = new System.Drawing.Point(354, 309);
+            this.btnCancelar.Location = new System.Drawing.Point(385, 305);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(81, 33);
             this.btnCancelar.TabIndex = 13;
@@ -149,13 +154,14 @@ namespace ABM
             // 
             this.btnAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdd.Location = new System.Drawing.Point(261, 309);
+            this.btnAdd.Location = new System.Drawing.Point(292, 305);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(87, 33);
             this.btnAdd.TabIndex = 12;
             this.btnAdd.Text = "Agregar";
             this.btnAdd.UseVisualStyleBackColor = false;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            this.btnAdd.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.btnAdd_KeyPress);
             // 
             // Agregar
             // 
@@ -176,7 +182,7 @@ namespace ABM
             this.Controls.Add(this.btnAdd);
             this.Name = "Agregar";
             this.Text = "Agregar";
-            
+            this.Shown += new System.EventHandler(this.Agregar_Shown);
             this.ResumeLayout(false);
             this.PerformLayout();
 

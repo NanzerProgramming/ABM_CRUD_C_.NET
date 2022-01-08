@@ -32,6 +32,48 @@ namespace ABM
             this.Close();
             ((Menu)this.Owner).PopulateUsuarios();
         }
+
+        private void txtAgregarUsu_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == Convert.ToChar(Keys.Enter))
+            {
+                txtAgregarContra.Focus();
+            }
+        }
+        private void txtAgregarContra_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == Convert.ToChar(Keys.Enter))
+            {
+                txtAgregarMail.Focus();
+            }
+        }
+        private void txtAgregarMail_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == Convert.ToChar(Keys.Enter))
+            {
+                txtAgregarTel.Focus();
+            }
+        }
+        private void txtAgregarTel_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == Convert.ToChar(Keys.Enter))
+            {
+                txtAgregarDire.Focus();
+            }
+        }
+
+        private void txtAgregarDire_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == Convert.ToChar(Keys.Enter))
+            {
+                btnAdd.Focus();
+            }
+        }
+
+        private void Agregar_Shown(object sender, EventArgs e)
+        {
+            txtAgregarUsu.Focus();
+        }
         #endregion
 
         #region PRIVATE METHODS
@@ -77,6 +119,15 @@ namespace ABM
 
         }
 
+
         #endregion
+
+        private void btnAdd_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == Convert.ToChar(Keys.Right))
+            {
+                btnCancelar.Focus();
+            }
+        }
     }
 }
